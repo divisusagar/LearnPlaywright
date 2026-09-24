@@ -1,5 +1,6 @@
 let sName = "susagar";
 let sGrade = 'A';
+let mStatus = "";
 let sAge = 35;
 let sPercentage = 8.99;
 let isTrue = true;
@@ -10,6 +11,7 @@ let emptyArr = [];
 
 console.log("sName =", sName, " is a ",typeof(sName), " type");
 console.log("sGrade =", sGrade, " is a ",typeof(sGrade), " type");
+console.log("mStatus =", mStatus, " is a ",typeof(mStatus), " type");
 console.log("sAge =", sAge, " is a ",typeof(sAge), " type");
 console.log("sPercentage =", sPercentage, " is a ",typeof(sPercentage), " type");
 console.log("isTrue =", isTrue, " is a ",typeof(isTrue), " type");
