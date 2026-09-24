@@ -1,0 +1,23 @@
+var $ = 10;
+var _ = 20;
+var $a = 30;
+var _b = 40;
+var abc = 50;
+// var 1a = 'susagar';
+var a1 = 'div';
+var name = 'susagar divi';
+var first_name = 'pavan';
+var lastName = 'divi';
+var first$name = 'jositha';
+
+console.log($);
+console.log(_);
+console.log($a);
+console.log(_b);
+console.log(abc);
+// console.log(1a);
+console.log(a1);
+console.log(name);
+console.log(first_name);
+console.log(lastName);
+console.log(first$name);
