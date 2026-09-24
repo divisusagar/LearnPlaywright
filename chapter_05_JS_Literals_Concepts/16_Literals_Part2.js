@@ -6,9 +6,11 @@ let d = 0b1010;       // Binary → 10
 let e = 0o17;         // Octal → 15
 let f = 0xFF;         // Hexadecimal → 255
 let g = 123n;         // BigInt (for very large numbers) — note the "n" suffix
+let million = 1e6;
+let tiny = 1.5e-4;
 console.log("1. Number Literals");
-console.log(a, b, c, d, e, f, g)
-console.log(typeof(a), typeof(b), typeof(c), typeof(d), typeof(e), typeof(f), typeof(g))
+console.log(a, b, c, d, e, f, g, million, tiny)
+console.log(typeof(a), typeof(b), typeof(c), typeof(d), typeof(e), typeof(f), typeof(g), typeof(million), typeof(tiny));
 
 // 2. String Literals
 let a1 = 'Single quotes';
