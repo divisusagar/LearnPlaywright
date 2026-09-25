@@ -1,3 +1,5 @@
 node_modules/ 
 test-results/ 
-playwright-report/ 
+playwright-report/
+
+chapter_01_JS_Basics/00_firstScript.js
