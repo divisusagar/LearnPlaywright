@@ -6,3 +6,5 @@ let age = 0;
 let audi = "";
 console.log(typeof audi);
 console.log(typeof age);
+console.log(typeof pramod_has_two_wives);
+console.log(typeof no_audi_pramod_sir_has);

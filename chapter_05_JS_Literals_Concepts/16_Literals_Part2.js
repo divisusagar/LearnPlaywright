@@ -12,6 +12,11 @@ console.log("1. Number Literals");
 console.log(a, b, c, d, e, f, g, million, tiny)
 console.log(typeof(a), typeof(b), typeof(c), typeof(d), typeof(e), typeof(f), typeof(g), typeof(million), typeof(tiny));
 
+console.log("Number.MAX_VALUE : ",Number.MAX_VALUE);
+console.log("Number.MAX_SAFE_INTEGER : ",Number.MAX_SAFE_INTEGER);
+let numberMaxSafeIntegerPlus1 = 9007199254740998;
+console.log("numberMaxSafeIntegerPlus1 :", numberMaxSafeIntegerPlus1);
+
 // 2. String Literals
 let a1 = 'Single quotes';
 let b1 = "Double quotes";
