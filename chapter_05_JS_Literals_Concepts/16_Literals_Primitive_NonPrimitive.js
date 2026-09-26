@@ -32,43 +32,46 @@ console.log(" 3. Boolean Literals");
 console.log(isActive, isDelete);
 console.log(typeof(isActive), typeof(isDelete));
 
-// 4. Array Literals
+
+// 4. Null Literal
+let a2 = null;   // represents "intentionally empty" value
+console.log("4. Null Literal");
+console.log(a2);
+console.log(typeof(a2));
+
+// 5. Undefined (technically a primitive value, not a "typed" literal)
+let a3;
+console.log("5. Undefined ");
+console.log(a3); // undefined — no value assigned yet
+console.log(typeof(a3));
+
+// 6. BigInt
+let a4 = 0n;
+console.log("6.  BigInt");
+console.log(a4);
+console.log(typeof a4);
+
+// Non-Primitive Data types
+console.log("Non-Primitive Data types")
+// 1. Array Literals
 let mixedArr = [123, "four", true, null];  // mixed types allowed
 let emptyArr = [];
-console.log("4. Array Literals");
+console.log("1. Array Literals");
 console.log(mixedArr, emptyArr);
 console.log(typeof(mixedArr), typeof(emptyArr));
 
-// 5. Object Literals
+// 2. Object Literals
 let user = {
   name: "susagar",
   age: 35,
   isActive: true
 };
-console.log("5. Object Literals");
+console.log("2. Object Literals");
 console.log(user);
 console.log(typeof(user));
 
-// 6. RegExp (Regular Expression) Literals
-let pattern = /^[a-z]+$/;      // matches lowercase letters only
-let pattern2 = /hello/gi;      // "g" = global, "i" = case-insensitive
-console.log("6. RegExp (Regular Expression) Literals");
-console.log(pattern, pattern2);
-console.log(typeof(pattern), typeof(pattern2));
 
-// 7. Null Literal
-let a2 = null;   // represents "intentionally empty" value
-console.log("7. Null Literal");
-console.log(a2);
-console.log(typeof(a2));
-
-// 8. Undefined (technically a primitive value, not a "typed" literal)
-let a3;
-console.log("8. Undefined ");
-console.log(a3); // undefined — no value assigned yet
-console.log(typeof(a3));
-
-// 9. Function Literals (Function Expressions)
+// 3. Function Literals (Function Expressions)
 let greet = function() {
   console.log("Hello greet function");
 };

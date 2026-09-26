@@ -1,6 +1,6 @@
 let x = 10;
 console.log("let 'x' in Declared & Assigned in Global Scope: ", x);
-// let x = 11; // Identifier 'x' has already been declared i.e already Declared let variable can't be Redeclared
+// let x = 11; // SyntaxError: Identifier 'x' has already been declared i.e already Declared let variable can't be Redeclared
 x = 12;
 console.log("let 'x' value is updated in Global Scope: ", x);
 
