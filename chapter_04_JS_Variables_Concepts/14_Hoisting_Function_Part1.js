@@ -5,8 +5,8 @@ function getUserStatus(){
     // TDZ for block-scoped "status_code" starts here
     
     console.log(status_code);
-    // let status_code = "Active"; ReferenceError: Cannot access 'status_code' before initialization
-    // console.log(status_code);
+    let status_code = "Active";
+    console.log(status_code);
 }
 getUserStatus();
 console.log(status_code);
