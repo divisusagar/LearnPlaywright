@@ -1,0 +1,11 @@
+// Escape Characters : \ \n \t
+
+// Need output: hi hello "susagar"
+let str1 = 'hi hello "susagar"'
+console.log(str1)
+
+// let str2 = "hi hello "susagar"" // SyntaxError: Unexpected identifier 'susagar'
+// console.log(str2)
+
+let str3 = "hi hello \"susagar\""
+console.log(str3)
