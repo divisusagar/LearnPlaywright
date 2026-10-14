@@ -15,6 +15,7 @@ const browsers = ['Chrome', 'Edge', 'Firefox', 'Chrome']
 console.log(browsers.includes('Edge'))      // true
 console.log(browsers.includes('Safari'))    // false
 console.log(browsers.includes('firefox'))   // false due to Case-Sentivite
+console.log(browsers.includes('Firefox Mozilla'))   // false - array item must equal exactly
 
 /*
 Playwright example: verify a value exists in a list of dropdown options
@@ -50,5 +51,70 @@ console.log(manager)    // undefined
 Playwright example: pick a specific rows data from a list
 const texts = await page.locator('.product-name').allTextContents();
 const laptops = texts.find((t) => t.includes('Laptop'));
+
+*/
+
+// 4. findIndex(): position of the first match
+const user1 = [
+    { name: 'Pavan'},
+    { name: 'Reddy'},
+    { name: 'Arjun'},
+];
+console.log(user1.findIndex((u) => u.name === 'Reddy'))     // 1
+console.log(user1.findIndex((u) => u.name === 'Unknown'))   // -1
+
+/*
+Playwright use: find which row number holder a value, then use that index to click the matching button in the same row
+const names = await page.locator('table tr td:first-child').allTextContents();
+const rowIndex = names.findIndex((n) => === 'Priya');
+await page.locator('table tr').nth(rowIndex).locator('button').click();
+*/
+
+// 5. some(): does atleast one match?
+//          : its like find(), but returns true or false
+const scores = [45, 82, 30];
+console.log(scores.some((s) => s>80));  // true
+console.log(scores.some((s) => s>100)); // false
+
+// 6. every(): do all match?
+const scores1 = [46, 84, 62];
+console.log(scores1.every((s) => s>=45));   // true
+console.log(scores1.every((s) => s>=50));   // false
+/*
+Playwright use: validate every item in a list
+const prices = await page.locator('.price').allTextContents();
+const allHaveDollor = prices.every((p) => p.startsWith('$'));
+expect(allHaveDollor).toBe(true);
+*/
+
+// 7. filter(): all matches
+const links = ['Home', 'About', 'Contacts', 'About Us'];
+console.log(links.filter((l) => l.includes("About")))   // [ 'About', 'About Us' ]
+/*
+Playwright use: count or collect all matching items
+const texts = await page.locator('a').allTextContents();
+const blogLinks = texts.filter((t) => t.toLowerCase().includes('blog));
+console.log(blogLinks.length);
+*/
+
+
+console.log(["Priya Sharma"].includes("Priya"));                // true
+console.log(["Priya Sharma"].some((n) => n.includes("Priya"))); // false
+
+/*
+Which one to pick: 
+
+Need true/false only?
+ ├─ one specific value ........................ includes()
+ ├─ does ANY item pass a rule ................. some()
+ └─ do ALL items pass a rule .................. every()
+
+Need the item itself?
+ ├─ first match only .......................... find()
+ └─ every match ............................... filter()
+
+Need the position?
+ ├─ of a specific value ....................... indexOf()
+ └─ of the first item passing a rule .......... findIndex()
 
 */
