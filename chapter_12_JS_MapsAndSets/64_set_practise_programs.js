@@ -20,3 +20,10 @@ for (let n of arrNums2) {
 }
 console.log('Uniques: ', uniqueNums2)
 console.log('Duplicates: ',duplicates);
+
+// The most useful Set trick: remove duplicates from an array
+const names = ['Priya', 'Reddy', 'Priya', 'Arjun', 'Reddy'];
+const uniqueNames = new Set(names);
+console.log(names);
+console.log(uniqueNames);
+console.log([...uniqueNames]);
