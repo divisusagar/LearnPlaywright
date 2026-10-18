@@ -6,7 +6,7 @@ Anology: a house blueprint
 Class (blueprint) -> new -> Object 1 (house at address A)
                          -> Object 2 (house at address B)
 
-Technical: The technical term for an object created from a class is an instance.                         
+Technical: The technical term for an object created from a class is 'an instance'.                         
 
 */
 

@@ -9,13 +9,21 @@ printString('Susagar Divi'); // with parameters, so value is re-assigned from 'H
 
 /* 2. Function Expression = function stored inside a variable
     Usage: We are calling Recursive function scenario, then we should go for function expression
+    Its also a Anonymous function i.e. function with no name
 */
-let addition = function addNums(a,b) {
-    console.log(a+b);
+let addition = function(a,b) {
+    return a+b;
 }
-addition(2,3);
+const sum = addition(2,3);
+console.log(sum);
 
-/* Anonymous Function : A function without a name is called Anonlymous Function
+// Anonymous Function 
+
+const number = [1, 2, 3, 4, 5];
+console.log(number.map((e) => e*e));
+
+/*
+A function without a name is called Anonlymous Function
                         It has to be stored into a variable or it should part of another function 
 function(a,b) {
     console.log(a+b); 
@@ -69,6 +77,7 @@ additionFun(6,4);
 /* 3. Arrow function:-
     Syntax: () => {}
     Usage: Shoud be shored into a variable OR we can pass as a parameter to another function
+    Its also a Anonymous function
 */
 let productOfNumbers = (num1, num2) => {
     return num1*num2;
@@ -83,6 +92,11 @@ console.log(productOfNumbers1(5,6));
 let squareOfNumbers = num1 => num1*num1;
 console.log(squareOfNumbers(7));
 
+// Function Constructor
+const substract = new Function('a','b','return a - b;')
+const subs = substract(100,30);
+console.log(subs);
+
 /* 4. Anonymous Function
 A function with no name. Usally passed directly as a value or callback
 */
@@ -92,7 +106,7 @@ setTimeout(function (){
     console.log("Anonymous Function")
 },3000);
 
-/* 5. Named Function Expressions
+/* 5. Named Function Expressions /  Recursive Function
 A function expression that also has a name. The name is only visible inside the function itself,
 and makes debugging and recursive easier (the name shows up in stack traces) 
 */
@@ -142,4 +156,31 @@ function sumOfNumbers(num1, num2) {
 mainfunction('Do Division', divisionOfNumbers)
 mainfunction('Do Addition', sumOfNumbers)
 
+// Generator Function:
+// function* and yield keyword
+function* generateNumberSequence() {
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
+}
+const generator = generateNumberSequence();
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
 
+// Higher-Order function
+function addition(a, b){
+    return a+b;
+}
+function multiplication(a,b){
+    return a*b;
+}
+function operate(funcName, a, b){
+    return funcName(a,b);
+}
+const add = operate(addition,10,15);
+console.log(add);
+const mul = operate(multiplication,15,8);
+console.log(mul);

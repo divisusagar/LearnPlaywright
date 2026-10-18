@@ -35,6 +35,18 @@ console.log(lenNames)
 
 console.log(names.map(name1 => name1.toUpperCase()))
 
+// Tempature F -> C
+// (f-32) * (5/9)
+
+let fahTemp = [32, 50, 72, 100, 200];
+console.log("Fah Temp: ", fahTemp)
+function fahToCel(fah){
+    return (fah - 32) * (5/9);
+}
+let celTemp = fahTemp.map(fahToCel);
+console.log("Cel Temp: ", celTemp);
+
+
 // 2. filter: keep items that pass the test
 // the callback must return true (keep) or false (drop)
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 , 10]
@@ -44,6 +56,21 @@ console.log('Even Numbers in array: ',even)
 
 const scores = [45, 82, 67, 91, 30];
 console.log(scores.filter((s) => s>= 50));
+
+let employee = [
+    {name: 'John', age: 30, gender: 'male'},
+    {name: 'Joshep', age: 35, gender: 'male'},
+    {name: 'Stella', age: 34, gender: 'female'},
+    {name: 'Jessica', age: 25, gender: 'female'},
+    {name: 'Peter', age: 36, gender: 'male'},
+];
+
+let femaleEmp = employee.filter( (emp) => {
+        return emp.gender === 'female' && emp.age >20;
+});
+console.log(femaleEmp);
+
+
 
 // 3. reduce: combine everything into one value
 // syntax: array.reduce( (accumulator, currentItem, index, array) => login, initialValueForAccumulator )
@@ -55,8 +82,24 @@ const words = ['Hello', 'JS', 'World']
 console.log(words.reduce((text, w) => text + ' '+w))
 
 const number2 = [5, 12, 80, 20, 3]
-console.log(number2.reduce((max,n) => (n>max ? n : max)))
-
+console.log(number2.reduce((max,n) => (n>max ? n : max)));
+// const maxNum = number2.reduce( (max,n) => {
+//     if(n>max) {
+//         return n;
+//     } else {
+//         return max;
+//     }
+// }, number2[0] );
+// console.log("Maximum Number is: ",maxNum);
+console.log(number2.reduce( (min,n) => (n<min) ? n : min));
+// const minNum = number2.reduce( (min,n) => {
+//     if(n<min){
+//         return n;
+//     } else {
+//         return min;
+//     }
+// }, number2[0])
+// console.log("Minimal Number is: ",minNum);
 
 const number3 = [1, 2, 3, 4, 5, 6];
 const result = number3
@@ -71,4 +114,4 @@ const totalP = prices
         .map((p) => Number(p.replace('$','')))
         .filter((p) => p > 5 )
         .reduce((sum,p) => sum+p,0 );
-console.log(totalP)
+console.log(totalP) // 75
