@@ -136,3 +136,12 @@ console.log(testStatus.at(-3))  // pass
 console.log(testStatus.includes("skips"))   // false
 console.log(testStatus.at(0))               // pass
 console.log(testStatus.indexOf("fail"))     // 1
+
+// indexOf()
+let color = ['black', 'red', 'green', 'blue', 'red'];
+let indexRed = color.indexOf('red');
+console.log(indexRed); // 1
+console.log(color.indexOf("pink")); // -1
+// if we want 2nd occurance index of color red, the
+let index2ndRed = color.indexOf('red', (color.indexOf('red'))+1); // here the 2nd argument indicates the position of search start
+console.log(index2ndRed);

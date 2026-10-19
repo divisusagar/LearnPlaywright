@@ -27,3 +27,23 @@ for (let key in car) {
     count++;
 }
 console.log(count);
+
+console.log('*'.repeat(50));
+
+const user = {
+    name: "John",
+    age: 38,
+    city: "New York"
+};
+for (const k in user){
+    console.log(k + ": "+ user[k]);
+
+}
+
+console.log('*'.repeat(50));
+
+const browsers = ["chrome", "firefox", "edge", "IE"];
+for (const browser in browsers) {               // since we are using for...in on array
+    console.log(browser); // Output: 0 1 2 3    // here index are printed
+    console.log(browsers[browser]);             // here we need to use array[element] to print the value
+}

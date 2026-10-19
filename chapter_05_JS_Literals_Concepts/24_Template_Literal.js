@@ -27,3 +27,22 @@ const payload = `{
     "timestamp": "${new Date().toISOString()}"
 }`;
 console.log(payload);
+
+const multiLine = `
+Hi ${firstName} ${lastName},
+how are you doing
+Hope we you are available for meeting.
+`;
+console.log(multiLine);
+
+const a = 10;
+const b = 20;
+const result = `the addition of ${a} and ${b} is ${a+b}`;
+console.log(result);
+
+function getXpath(name){
+    // return "//input[@id='name']";    // output: //input[@id='name']
+    return `//input[@id='${name}']`;
+}
+console.log(getXpath('susagar'));
+console.log(getXpath('susagar\'s'));

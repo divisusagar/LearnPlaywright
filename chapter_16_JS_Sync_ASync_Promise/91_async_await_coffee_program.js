@@ -77,4 +77,4 @@ async function makeCoffee(){
         console.error("Error occured: ", error);
     }
 }
-makeCoffee();
+makeCoffee(); 
