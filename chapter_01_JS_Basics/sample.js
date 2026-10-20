@@ -1,13 +1,13 @@
-setTimeout(() => {
-  console.log("0. Coffee Preparation");
-}, 3000);
+// setTimeout(() => {
+//   console.log("0. Coffee Preparation");
+// }, 3000);
 
-setTimeout(() => {
-  console.log("1. Boil Water");
-}, 5000);
+// setTimeout(() => {
+//   console.log("1. Boil Water");
+// }, 5000);
 
 
-
+console.log('*'.repeat(50))
 
 setTimeout(() => {
   console.log("1. Boil water");
@@ -24,8 +24,8 @@ setTimeout(() => {
         setTimeout(() => {
           console.log("5. Serve coffee");
         }, 5000);
-      }, 5000);
-    }, 5000);
-  }, 1000);
+      }, 4000);
+    }, 3000);
+  }, 2000);
 }, 1000);
 
