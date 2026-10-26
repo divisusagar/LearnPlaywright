@@ -9,7 +9,7 @@ function getInfoTest() {
         console.log("FAIL")
     }
 }
-getInfo();
+getInfoTest();
 
 console.log('*'.repeat(50));
 

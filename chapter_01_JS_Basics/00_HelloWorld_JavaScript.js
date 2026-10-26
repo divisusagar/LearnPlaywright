@@ -12,3 +12,4 @@ console.log(message);
     If you try to add : string in a plain .js file, it'll throw a syntax error — that annotation only works in .ts files, since it's checked by the TypeScript compiler (tsc) before your code ever gets converted to plain JS. */
     
 // console.log(message1);
+
